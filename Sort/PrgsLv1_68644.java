@@ -3,7 +3,7 @@ import java.util.HashSet;
 /*
     programmers 두 개 뽑아서 더하기
     https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=java
-
+    O(N^2log(N^2))
  */
 public class PrgsLv1_68644 {
     public int[] solution(int[] numbers) {
