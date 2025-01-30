@@ -1,11 +1,12 @@
 package Implementation;
 
 /*
-    행렬의 곱셉
+    programmers Lv2 행렬의 곱셉
     https://school.programmers.co.kr/learn/courses/30/lessons/12949
+    O(N^3)
  */
 
-public class PrgsLv1_12949 {
+public class PrgsLv2_12949 {
     public static int[][] main(int[][] arr1, int[][] arr2) {
         int r1 = arr1.length;
         int c1 = arr1[0].length;
