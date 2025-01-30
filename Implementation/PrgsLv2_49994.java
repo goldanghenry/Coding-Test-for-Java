@@ -46,10 +46,10 @@ public class PrgsLv2_49994 {
             answer.add(nx + " " + ny + " " + x + " " + y);
 
             // 좌표 이동
-            nx = x;
-            ny = y;
+            x = nx;
+            y = ny;
         }
 
-        return answer.size();
+        return answer.size() / 2;
     }
 }
