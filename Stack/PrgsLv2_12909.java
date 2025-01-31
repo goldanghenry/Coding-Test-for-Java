@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
  * https://school.programmers.co.kr/learn/courses/30/lessons/12909?language=java
  */
 
-class PrgsLv12909 {
+class PrgsLv2_12909 {
     public static boolean solution(String s) {
         ArrayDeque<Character> stack = new ArrayDeque<>();
         
