@@ -18,28 +18,21 @@ class Boj_S1_11660 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int[][] arr = new int[N+1][N+1];
         int[][] prefixSum = new int[N+1][N+1];
 
-        // 1. 표 입력 받기
+        // 1. 표 입력과 동시에 누적합 계산산
         for (int i = 1; i <= N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= N; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                int cur = Integer.parseInt(st.nextToken());
+                prefixSum[i][j] = cur
+                + prefixSum[i-1][j] 
+                + prefixSum[i][j-1] 
+                - prefixSum[i-1][j-1];
             }
         }
 
-        // 2. 누적 합 계산
-        for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= N; j++) {
-                prefixSum[i][j] = arr[i][j] 
-                                    + prefixSum[i-1][j] 
-                                    + prefixSum[i][j-1] 
-                                    - prefixSum[i-1][j-1];
-            }
-        }
-
-        // 3. 구간 합 계산
+        // 2. 구간 합 계산
         StringBuilder sb = new StringBuilder();
         for (int k = 0; k < M; k++) {
             st = new StringTokenizer(br.readLine());
