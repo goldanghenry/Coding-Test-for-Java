@@ -24,7 +24,7 @@ public class Boj_G5_2023 {
 
     static int[] firstPrimeArr = {2,3,5,7}; // 1의 자리 소수
     static int[] lastPrimeArr = {1,3,7,9};  // 2자리 수 이상의 소수의 마지막에 올 수 있는 수
-
+    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -33,6 +33,7 @@ public class Boj_G5_2023 {
         for (int i =0; i< 4; i++) {
             isSpecialNumber(N, new StringBuilder().append(firstPrimeArr[i]));
         }
+        System.out.println(sb);
     }
 
     // 소수 판별 -> 제곱근 까지만 검사
@@ -47,7 +48,7 @@ public class Boj_G5_2023 {
     public static void isSpecialNumber(int N, StringBuilder curStr) {
         // 기저 조건 : 현재 문자가 N자리에 도달한 경우
         if (N == curStr.toString().length()) {
-            System.out.println(curStr);
+            sb.append(curStr).append("\n");
             return;
         }
 
