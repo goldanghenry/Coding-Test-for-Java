@@ -25,8 +25,8 @@ public class Boj_S1_2178 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
 
         maze = new int[N][M];           // 맵
         visited = new boolean[N][M];    // 방문 체크
@@ -62,7 +62,7 @@ public class Boj_S1_2178 {
                         maze[nx][ny] == 1 && !visited[nx][ny] ) {
                     queue.add(new int[]{nx,ny});
                     visited[nx][ny] = true;
-                    dist[nx][ny] = dist[x][y]+1;
+                    dist[nx][ny] = dist[cur[0]][cur[1]]+1;
                 }
             }
         }
