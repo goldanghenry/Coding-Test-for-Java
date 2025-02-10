@@ -19,14 +19,18 @@ class Boj_S4_1920 {
 
         int N = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[N];
+        int[] arr = new int[N]; // 배열의 수
 
+        // 배열 입력 받기
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
+
+        // 이분 탐색을 위한 정렬
         Arrays.sort(arr);
 
+        // 타겟의 수
         st = new StringTokenizer(br.readLine());
         int M = Integer.parseInt(st.nextToken());
 
@@ -35,18 +39,19 @@ class Boj_S4_1920 {
             int target = Integer.parseInt(st.nextToken());
             System.out.println(binarySearch(arr, target)); 
         }
-
     }
 
+    // 이분 탐색
     static int binarySearch(int[] arr, int target) {
-        int left = 0, right = arr.length - 1;
+        int left = 0, right = arr.length - 1;   // 인덱스 설정
 
-        while( left <= right) {
-            int mid = left + (right-left)/2;
+        // 인덱스가 같거나, 교차할 때까지 반복
+        while( left <= right) { 
+            int mid = left + (right-left)/2;    // 가운데 분기점
 
-            if (target == arr[mid]) return 1;
-            else if (target < arr[mid]) right = mid -1;
-            else left = mid +1;
+            if (target == arr[mid]) return 1;   // 타겟 발견
+            else if (target < arr[mid]) right = mid -1; // 타겟이 mid 보다 앞에 있다면 오른쪽 인덱스 당기기
+            else left = mid +1; // 타겟이 mid 보다 뒤에 있다면, 왼쪽 인덱스 당기기
         }
         return 0;
     }
