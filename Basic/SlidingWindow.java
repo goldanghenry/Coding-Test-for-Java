@@ -33,9 +33,6 @@ public class SlidingWindow {
             sum += arr[j++];
             max = Math.max(max, sum);
         }
-
         System.out.println(max);
-
-
     }
 }
