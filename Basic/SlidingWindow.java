@@ -19,7 +19,8 @@ public class SlidingWindow {
         }
 
         // 초기 윈도우 생성
-        int i = 0, j = 0;   // 윈도우 시작, 끝
+        // int i = 0, j = 0;   // 윈도우 시작, 끝
+        int j = 0;
         long sum = 0;
         while (j < M) sum += arr[j++];
 
@@ -27,7 +28,8 @@ public class SlidingWindow {
 
         // 윈도우 뒤로 하나씩 밀면서 처리
         while(j < N) {
-            sum -= arr[i++];
+            sum -= arr[j-M];
+            // sum -= arr[i++];
             sum += arr[j++];
             max = Math.max(max, sum);
         }
