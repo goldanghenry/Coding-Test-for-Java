@@ -1,11 +1,11 @@
-package Graph;
+package Implementation;
 
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-class Main {
+class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -36,6 +36,7 @@ class Main {
                 st = new StringTokenizer(br.readLine());
                 for (int j = 0; j < M; j++) {
                     int life = Integer.parseInt(st.nextToken());
+                    if (life == 0) continue;
                     map[sr + i][sc + j] = life;
                     record[sr + i][sc + j] = -1;
                     state[sr + i][sc + j] = life * 2;
@@ -43,11 +44,11 @@ class Main {
             }
 
             // 시뮬레이션 시작
-            for(int hour = 1; hour < K; hour++) {
-                for(int i = sr - hour+1; i < rows; i++) { // 여기도 탐색 범위를 줄일 수 있다.
-                    if( i >= sr+N+hour ) break;
+            for(int hour = 1; hour <= K; hour++) {
+                for(int i = sr - hour+1; i < rows; i++) {
+                    if( i >= sr+N+hour ) break; // 확장하고 아직 미치지 않는 부분은 순회하지 않도록
                     for(int j = sc - hour+1; j < cols; j++) {
-                        if( j >= sc+M+hour ) break;
+                        if( j >= sc+M+hour ) break; // 확장하고 아직 미치지 않는 부분은 순회하지 않도록
                         // 세포가 아님 or 동시간 확장한 세포 or 죽은 세포 continue
                         if (map[i][j] == 0 || record[i][j] == hour || state[i][j] == -1) continue;
 
