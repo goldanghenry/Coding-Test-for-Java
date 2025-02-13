@@ -3,7 +3,7 @@ package Basic;
 import java.util.ArrayList;
 import java.util.List;
 
-class DFSExample {
+class DFS {
     public static List<List<Integer>> graph;
     public static boolean[] visited;
 
