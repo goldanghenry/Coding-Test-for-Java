@@ -25,6 +25,8 @@ public class CompleteBinaryTree<T> {
         if(isFull()) throw new RuntimeException("트리가 포화상태입니다.");
         nodes[++lastIndex] = e;
     }
+
+
     public void bfs() {
         if(isEmpty()) throw new RuntimeException("빈트리 상태입니다..");
 
@@ -72,5 +74,13 @@ public class CompleteBinaryTree<T> {
         }
     }
 
+    // dfs -> 반복문이든 재귀든 상관 없음
+    public void dfs(int current) { // 1개의 노드 탐색의 플랫한 시야!!
+
+            System.out.println(nodes[current]);    // 노드로 처리할 로직 수행
+
+            if (current*2 <= lastIndex) dfs(current*2); // 왼쪽 자식이 있다면, 나와 동일한 방법으로 탐색하기
+            if (current*2+1 <= lastIndex) dfs(current*2+1); // 오른쪽 자식이 있다면, 나와 동일한 방법으로 탐색하기
+    }
 }
 
