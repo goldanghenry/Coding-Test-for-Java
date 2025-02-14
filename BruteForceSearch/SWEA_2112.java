@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
  */
 
 class SWEA_2112 {
+
     static int D, W, K;
     static int result;
     static int[][] map;
@@ -40,19 +41,15 @@ class SWEA_2112 {
 
         int backup = condArr[cur];
 
-        // 0 : x
-        dfs(condArr, cur + 1, usedCnt);    
+        dfs(condArr, cur + 1, usedCnt);    // 0 : x
         
-        // 1 : A
-        condArr[cur] = 1;                  
-        dfs(condArr, cur + 1, usedCnt + 1);
+        condArr[cur] = 1; 
+        dfs(condArr, cur + 1, usedCnt + 1); // 1 : A
         
-        // 2 : B
         condArr[cur] = 2;                  
-        dfs(condArr, cur + 1, usedCnt + 1);
+        dfs(condArr, cur + 1, usedCnt + 1); // 2 : B
 
-        // 백트레킹
-        condArr[cur] = backup;
+        condArr[cur] = backup;  // 백트레킹
     }
 
     static boolean evaluate(int[] condArr) {
@@ -69,12 +66,11 @@ class SWEA_2112 {
         // 두 번째 셀부터 순회
         for (int j = 1; j < D; j++) {
             int cur = (condArr[j] != 0 ? condArr[j] : map[j][i]);
-            if (cur == prev) {
-                count++;
-            } else {
-                count = 1;
-            }
+            
+            if (cur == prev) count++;
+            else count = 1;
             prev = cur;
+
             // 조건 만족하면 더 이상 검사할 필요 없음
             if (count >= K) {
                 valid = true;
@@ -82,13 +78,11 @@ class SWEA_2112 {
             }
         }
         
-        // 한 열이라도 조건을 만족하지 못하면 전체 film은 불합격
+        // 한 열이라도 조건을 만족하지 못하면 불합격
         if (!valid) return false;
     }
     return true;
 }
-
-
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
