@@ -1,3 +1,5 @@
+package PermCombSubs;
+
 import java.io.*;
 import java.util.Scanner;
 
