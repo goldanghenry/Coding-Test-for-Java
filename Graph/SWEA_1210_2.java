@@ -2,7 +2,13 @@ package Graph;
 
 import java.util.StringTokenizer;
 import java.io.*;
-//  0.13239s
+
+/*
+ * SWEA 1210. Ladder1 (D4)
+ * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh&
+ * 3방위 탐색을 이용한 풀이
+ */
+
 public class SWEA_1210_2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

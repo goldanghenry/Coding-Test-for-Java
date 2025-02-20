@@ -20,7 +20,7 @@ class Boj_S1_11660 {
 
         int[][] prefixSum = new int[N+1][N+1];
 
-        // 1. 표 입력과 동시에 누적합 계산산
+        // 1. 표 입력과 동시에 누적합 계산
         for (int i = 1; i <= N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= N; j++) {

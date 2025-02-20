@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 /*
  * SWEA 1210. Ladder1 (D4)
  * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh&
- * 0.17287s
+ * while문을 이용한 풀이
  */
 
 public class SWEA_1210_1 {
