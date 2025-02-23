@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     부분 집합
  */
 
-public class BOJ_12891 {
+public class BOJ_12891_1 {
     static int S, P, result;    // DNA 문자열의 길이, 비밀번호로 사용할 부분 문자열의 길이
     static char[] inputs;       // DNA 문자열
     static int[] std;           // 최소 사용 기준
