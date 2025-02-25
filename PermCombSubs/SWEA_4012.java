@@ -36,13 +36,12 @@ public class SWEA_4012 {
 
             sb.append("#").append(t).append(" ").append(result).append("\n");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 
     static void dfs(int depth) {
         // 기저 조건
         if (depth == N) {
-            int temp = 0;
             int aSum = 0, bSum = 0;
             for  (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
@@ -54,7 +53,7 @@ public class SWEA_4012 {
                     }
                 }
             }
-            temp = Math.abs(aSum - bSum);
+            int temp = Math.abs(aSum - bSum);
             result = Math.min(result, temp);
             return;
         }
