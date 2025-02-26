@@ -1,4 +1,4 @@
-package Graph;
+package Implementation;
 
 import java.util.Scanner;
 import java.io.*;
