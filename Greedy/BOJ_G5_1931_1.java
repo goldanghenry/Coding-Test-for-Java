@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 빨리 끝난다는 것은 빨리 시작했다는 것.
  */
 
-public class BOJ_G5_1931 {
+public class BOJ_G5_1931_1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
