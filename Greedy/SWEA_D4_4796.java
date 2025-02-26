@@ -5,9 +5,7 @@ import java.util.Scanner;
  * SWEA 4796 D4, 의석이의 우뚝 선 산
  * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWS2h6AKBCoDFAVT
  * 목표 -> 우뚝선 산이 몇 개인가?
- * 서쪽에서 i 번째 지점 -> i, 높이는 h_i
- * 두 지점이 같은 높이를 가지는 경우는 없다
- * 두 지점 사이에 있는 모든 지점을 볼 때, 
+ * 업힐, 다운힐시 카운트 
  */
 
 
