@@ -5,10 +5,10 @@ import java.util.StringTokenizer;
 
 /*
  * SWEA. 준환이의 양팔저울
- * https://swexpertacademy.com/main/solvingProblem/solvingProblem.do
+ * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWAe7XSKfUUDFAUw
  */
 
-public class SWEA_3234 {
+public class SWEA_D4_3234 {
     static int N, result;           // 무게추의 개수, 결과
     static int[] weight, sel;       // 무게추 배열, 실행 완료된 순열
     static boolean[] v;             // 사용 체크

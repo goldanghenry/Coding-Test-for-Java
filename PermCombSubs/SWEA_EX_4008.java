@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     한 번만 탐색하도록 구현한 DFS 방식의 코드입니다.
  */
 
-public class SWEA_4008 {
+public class SWEA_EX_4008 {
     static int N, maxNum, minNum;
     static int[] nums, opCount; // opCount[0]:'+', [1]:'-', [2]:'*', [3]:'/'
 

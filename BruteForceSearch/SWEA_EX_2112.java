@@ -19,7 +19,7 @@ import java.util.StringTokenizer;
  * - O(N^3)
  */
 
-class SWEA_2112 {
+class SWEA_EX_2112 {
 
     static int D, W, K;
     static int result;

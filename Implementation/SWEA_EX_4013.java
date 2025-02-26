@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
          * 내부: 시계 방향 = -1 (인덱스가 1 감소), 반시계 방향 = 1 (인덱스가 1 증가)
  */
 
-public class SWEA_4013 {
+public class SWEA_EX_4013 {
     // 4개의 자석, 각 자석은 8개의 톱니 정보를 저장 (N극: 0, S극: 1)
     static int[][] magnetLst;
     // 각 자석의 "화살표(지정된 톱니)"가 가리키는 현재 인덱스 (초기값은 0)

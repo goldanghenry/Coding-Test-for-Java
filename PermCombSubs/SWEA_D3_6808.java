@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWgv9va6HnkDFAW0
  */
 
-public class SWEA_6808 {
+public class SWEA_D3_6808 {
     static int N, win, lose;
     static int[] Arr, Brr, sel;
     static boolean[] checked;   // 규영 카드덱 체크

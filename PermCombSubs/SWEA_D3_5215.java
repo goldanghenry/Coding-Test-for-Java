@@ -9,7 +9,7 @@ import java.io.*;
     순서 의미x, 중복x -> 조합
  */
 
-public class SWEA_5215 {
+public class SWEA_D3_5215 {
     static int N, L, result;
     static int[] scores, cals;
 

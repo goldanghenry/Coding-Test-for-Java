@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     비트 마스킹으로 풀어보기
  */
 
-public class SWEA_3421 {
+public class SWEA_D5_3421 {
     static int N, sel, cnt;
     static int[] Mrr;
 

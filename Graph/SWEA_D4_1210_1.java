@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * while문을 이용한 풀이
  */
 
-public class SWEA_1210_1 {
+public class SWEA_D4_1210_1 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         

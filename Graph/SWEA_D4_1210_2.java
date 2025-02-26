@@ -9,7 +9,7 @@ import java.io.*;
  * 3방위 탐색을 이용한 풀이
  */
 
-public class SWEA_1210_2 {
+public class SWEA_D4_1210_2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[] dx = {0, 0,-1};  // 우, 좌, 상 -> 우선순위가 중요!

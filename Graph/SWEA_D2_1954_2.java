@@ -10,7 +10,7 @@ import java.io.*;
  * 재귀로 풀어보기
  */
 
-public class SWEA_1954_2 {
+public class SWEA_D2_1954_2 {
     static int N, num, top, bottom, left, right;
     static int[][] map;
     public static void main(String[] args) throws IOException {

@@ -11,7 +11,7 @@ import java.io.*;
  * 회사에서 출발하여 N명의 고객을 모두 방문하고 집으로 돌아가는 경로 중 최소 이동거리
  */
 
-public class SWEA_1247 {
+public class SWEA_D5_1247 {
     static int N, min;
     static int[] company, home, sel;
     static int[][] customers;

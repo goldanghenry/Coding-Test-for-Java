@@ -7,7 +7,7 @@ import java.io.*;
     SWEA. 무선 충전
     https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRDL1aeugDFAUo&
  */
-public class SWEA_5664 {
+public class SWEA_EX_5664 {
     static class BC {
         int x, y, cover, perform;
 

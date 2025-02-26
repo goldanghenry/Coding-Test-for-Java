@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * 비트 마스킹으로 풀어보기
  */
 
-public class SWEA_4012 {
+public class SWEA_EX_4012 {
     static int N, sel, result;
     static int[][] arr;
     public static void main(String[] args) throws IOException{

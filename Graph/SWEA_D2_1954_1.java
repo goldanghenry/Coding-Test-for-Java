@@ -10,7 +10,7 @@ import java.io.*;
  * 반복문으로 풀어보기
  */
 
-public class SWEA_1954_1 {
+public class SWEA_D2_1954_1 {
     public static void main(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();

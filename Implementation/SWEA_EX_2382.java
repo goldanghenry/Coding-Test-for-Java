@@ -6,7 +6,7 @@ import java.util.*;
     SWEA 2382. 미생물 격리
     https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl
  */
-public class SWEA_2382 {
+public class SWEA_EX_2382 {
     static int N, M, K;               // 셀의 크기, 격리 시간, 미생물 군집의 개수
     static boolean[] survival;        // 군집의 생존 여부
     static Micro[] groups;            // 군집 배열

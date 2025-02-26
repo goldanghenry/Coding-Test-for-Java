@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 * ((가장 큰 나무) - (각 나무) ) % 3 을 하며 줄이기
 */
 
-public class SWEA_14510 {
+public class SWEA_D2_14510 {
     public static void main(String[] args) throws IOException {
         BufferedReader  br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter  bw = new BufferedWriter(new OutputStreamWriter(System.out));

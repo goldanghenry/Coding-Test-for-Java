@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 // 2차원 배열에서 2차원 배열의 부분집합을 구하는 문제
 // 2중 for문을 이용하여 2차원 배열의 부분집합을 구하고, 최대값을 갱신하는 방식으로 풀이
 
-public class SWEA_2001 {
+public class SWEA_D2_2001 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
