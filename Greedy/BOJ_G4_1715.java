@@ -8,7 +8,7 @@ import java.io.*;
  * https://www.acmicpc.net/problem/1715
  */
 
-public class BOJ_1715 {
+public class BOJ_G4_1715 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());

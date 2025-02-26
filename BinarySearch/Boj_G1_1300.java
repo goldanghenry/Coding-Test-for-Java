@@ -11,7 +11,7 @@ import java.util.Scanner;
     - mid 이하의 숫자가 몇 개 존재하는지 카운트하며 탐색 진행
  */
 
-public class Boj_G1_1300 {
+public class BOJ_G1_1300 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

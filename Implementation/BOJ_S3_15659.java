@@ -13,7 +13,7 @@ import java.util.Scanner;
  * -> 조합 문제 (중복 x, 순서 상관 x)
  */
 
-public class BOJ_15659 {
+public class BOJ_S3_15659 {
     static int N, M;
     static int[] nums, sel;
     static StringBuilder sb;

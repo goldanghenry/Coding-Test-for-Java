@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
     https://www.acmicpc.net/problem/11724
  */
 
-public class Boj_S2_11724 {
+public class BOJ_S2_11724 {
     static List<List<Integer>> graph;
     static boolean[] visited;
 

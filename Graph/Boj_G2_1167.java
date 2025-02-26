@@ -15,7 +15,7 @@ import java.io.IOException;
     - dfs(bfs) -> 가장 먼 노드와 거리 기록 -> 그 노드에서 한번 더 dfs(bfs) 했을 때의 거리
  */
 
-public class Boj_G2_1167 {
+public class BOJ_G2_1167 {
     static int N;
     static List<int[]>[] tree;     // 여러 개의 List<int[]>가 각각 저장됨
     static boolean[] visited;      // 방문 검사

@@ -5,7 +5,7 @@ import java.util.HashSet;
     https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=java
     O(N^2log(N^2))
  */
-public class PrgsLv1_68644 {
+public class PRGS_LV1_68644 {
     public int[] solution(int[] numbers) {
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < numbers.length -1; i++) {

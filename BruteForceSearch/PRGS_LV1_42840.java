@@ -7,7 +7,7 @@ package BruteForceSearch;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class PrgsLv1_42840 {
+public class PRGS_LV1_42840 {
     public static int[] solution(int[] answers) {
         int[][] pattern = {
                 {1,2,3,4,5},

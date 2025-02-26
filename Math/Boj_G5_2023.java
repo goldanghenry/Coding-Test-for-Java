@@ -20,7 +20,7 @@ import java.util.Scanner;
 
  */
 
-public class Boj_G5_2023 {
+public class BOJ_G5_2023 {
 
     static int[] firstPrimeArr = {2,3,5,7}; // 1의 자리 소수
     static int[] lastPrimeArr = {1,3,7,9};  // 2자리 수 이상의 소수의 마지막에 올 수 있는 수

@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
     => dfs
  */
 
-public class Boj_G5_13023 {
+public class BOJ_G5_13023 {
     static List<List<Integer>> graph;
     static boolean[] visited;
     static boolean found = false;

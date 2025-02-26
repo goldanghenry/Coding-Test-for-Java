@@ -7,7 +7,7 @@ package Math;
 
 import java.io.*;
 
-public class Boj_B4_11720 {
+public class BOJ_B4_11720 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         

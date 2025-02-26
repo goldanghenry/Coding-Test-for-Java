@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
     시간 초과 판정
  */
 
-public class BOJ_11723_1 {
+public class BOJ_S5_11723_1 {
 
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -6,7 +6,7 @@ package Implementation;
     O(N^3)
  */
 
-public class PrgsLv2_12949 {
+public class PRGS_LV2_12949 {
     public static int[][] main(int[][] arr1, int[][] arr2) {
         int r1 = arr1.length;
         int c1 = arr1[0].length;

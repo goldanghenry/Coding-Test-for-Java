@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 식에서 '-' 기호 이후에 나오는 모든 수들의 합을 한꺼번에 빼면 최솟값
  */
 
-public class BOJ_1541 {
+public class BOJ_S2_1541 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();

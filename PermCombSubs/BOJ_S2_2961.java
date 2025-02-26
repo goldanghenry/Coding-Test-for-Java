@@ -8,7 +8,7 @@ import java.util.Scanner;
     부분 집합
  */
 
-public class BOJ_2961 {
+public class BOJ_S2_2961 {
     static int N, result;
     static boolean[] sel;
     static long[] Arr, Brr;

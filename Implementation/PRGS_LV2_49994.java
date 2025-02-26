@@ -11,7 +11,7 @@ import java.util.HashSet;
     - HashSet을 통해 처음으로 방문한 길만 기록
  */
 
-public class PrgsLv2_49994 {
+public class PRGS_LV2_49994 {
 
     // 맵을 벗어나는지 체크
     private static boolean isValidMove(int nx, int ny) {

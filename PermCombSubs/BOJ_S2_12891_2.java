@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
     https://www.acmicpc.net/problem/12891
     슬라이딩 윈도우
  */
-public class BOJ_12891_2 {
+public class BOJ_S2_12891_2 {
     static int[] minCnt;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

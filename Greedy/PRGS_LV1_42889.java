@@ -12,7 +12,7 @@ import java.util.Map;
     - O( M + 2N + NlogN ) = O(NlogN)
  */
 
-public class prgsLv1_42889 {
+public class PRGS_LV1_42889 {
     public int[] solution(int N, int[] stages) {
 
         // 스테이지별 도전자 수 O(N + M) -> 계수

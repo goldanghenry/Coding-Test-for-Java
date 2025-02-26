@@ -10,7 +10,7 @@ import java.util.*;
     https://www.acmicpc.net/problem/1260
  */
 
-public class Boj_S2_1260 {
+public class BOJ_S2_1260 {
     static List<List<Integer>> graph;
     static boolean[] visited;
     static StringBuilder sb = new StringBuilder();

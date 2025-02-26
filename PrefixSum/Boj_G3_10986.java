@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * 누적합
  */
 
-public class Boj_G3_10986 {
+public class BOJ_G3_10986 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

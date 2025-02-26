@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열 -> nPm
  */
 
-public class BOJ_15649 {
+public class BOJ_S3_15649 {
     static int N, M;
     static int[] nums, sel;
     static boolean[] v;

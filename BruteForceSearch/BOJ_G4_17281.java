@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     순열 -> 중복x
  */
 
-public class BOJ_17281 {
+public class BOJ_G4_17281 {
     static int N, result;
     static int[] sel;
     static boolean[] v;

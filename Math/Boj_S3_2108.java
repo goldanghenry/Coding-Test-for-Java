@@ -10,7 +10,7 @@ import java.util.*;
     https://www.acmicpc.net/problem/2108
  */
 
-public class Boj_S3_2108 {
+public class BOJ_S3_2108 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());

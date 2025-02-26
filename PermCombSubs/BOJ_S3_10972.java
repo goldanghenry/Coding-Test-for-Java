@@ -3,7 +3,12 @@ package PermCombSubs;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class BOJ_10972 {
+/*
+ * BOJ 다음 순열, silver 3
+ * https://www.acmicpc.net/problem/10972
+ */
+
+public class BOJ_S3_10972 {
     static int[] arr;
     static int N;
 

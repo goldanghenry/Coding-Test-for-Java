@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
     최단 경로 탐색이므로 BFS를 통해 거리를 기록하며 탐색을 진행
  */
 
-public class Boj_S1_2178 {
+public class BOJ_S1_2178 {
     static int N,M;
     static int[][] maze;   // 맵이므로 ArrayList 보다는 matrix로
     static boolean[][] visited;

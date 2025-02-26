@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * https://www.acmicpc.net/problem/11660
  */
 
-class Boj_S1_11660 {
+class BOJ_S1_11660 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * 이분 탐색으로 출력
  */
 
-class Boj_S4_1920 {
+class BOJ_S4_1920 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

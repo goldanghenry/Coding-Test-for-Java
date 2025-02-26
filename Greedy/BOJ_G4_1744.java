@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  * https://www.acmicpc.net/problem/1744
  */
 
-public class BOJ_1744 {
+public class BOJ_G4_1744 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());

@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * 최대(right) -> 모든 강의의 총 합
  */
 
-public class Boj_S1_2343 {
+public class BOJ_S1_2343 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
