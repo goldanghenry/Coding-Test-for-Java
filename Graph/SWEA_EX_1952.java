@@ -3,6 +3,12 @@ package Graph;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/*
+ * SWEA 1952 모의 역량테스트, 수영장
+ * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq
+ * 1년 이용권을 기본으로 두고, 각 달에 대해 1일, 1달, 3달 이용권 백트래킹
+ */
+
 public class SWEA_EX_1952 {
     static int result;
     static int[] tickets, attends;
