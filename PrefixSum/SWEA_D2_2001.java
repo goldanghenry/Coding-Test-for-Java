@@ -18,7 +18,7 @@ public class SWEA_D2_2001 {
         for (int t = 1; t <= T; t++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int N = Integer.parseInt(st.nextToken());
-            int M = Integer.parseInt(st.nextToken());z
+            int M = Integer.parseInt(st.nextToken());
 
             int max = Integer.MIN_VALUE;
             int[][] prefixSum = new int[N+1][N+1];
