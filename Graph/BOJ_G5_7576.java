@@ -13,20 +13,18 @@ import java.util.*;
  */
 
 public class BOJ_G5_7576 {
-    static Queue<int[]> startQ = new LinkedList<>();
+    static Queue<int[]> queue = new LinkedList<>();
     static int N,M, day, yet;
     static int[][]map;
     static int[] dx = {-1,1,0,0};
     static int[] dy = {0,0,-1,1};
 
     private static void bfs() {
-        Queue<int[]>queue = new LinkedList<>();
         
-        while(!startQ.isEmpty()) {
-            queue = startQ;
-            startQ = new LinkedList<>();    // 초기화
+        while(!queue.isEmpty()) {
+            int size = queue.size();
             
-            while(!queue.isEmpty()) {
+            for(int i = 0; i < size; i++) {
                 int[] cur = queue.poll();
 
                 for(int k = 0; k < 4; k++) {
@@ -38,7 +36,7 @@ public class BOJ_G5_7576 {
 
                     map[nx][ny] = map[cur[0]][cur[1]]+1;    // 방문
                     yet--;                                  // 안 익은 개수 감수
-                    startQ.offer(new int[]{nx,ny});
+                    queue.offer(new int[]{nx,ny});
                 }
             }
             day++;
@@ -60,7 +58,7 @@ public class BOJ_G5_7576 {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
-                if (map[i][j] == 1) startQ.offer(new int[]{i,j});
+                if (map[i][j] == 1) queue.offer(new int[]{i,j});
                 else if (map[i][j]== 0) yet++;
             }
         }
