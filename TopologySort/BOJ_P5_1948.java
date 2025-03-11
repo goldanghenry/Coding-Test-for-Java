@@ -20,8 +20,6 @@ public class BOJ_P5_1948 {
         ArrayList<int[]>[] graph2 = new ArrayList[N+1]; // end -> start
         int[] v = new int[N+1];     // 가중치
         int[] inD = new int[N+1];
-        int[] rCnt = new int[N+1];   // 도로 개수
-
 
         for (int i = 1; i <= N ; i++ ) {
             graph[i] = new ArrayList<>();
@@ -49,7 +47,6 @@ public class BOJ_P5_1948 {
         queue.offer(start);
         v[start] = 0;
 
-        int result = 0;
         while(!queue.isEmpty()) {
             int cur = queue.poll();
             
@@ -60,12 +57,12 @@ public class BOJ_P5_1948 {
 
                 if (inD[next] == 0) queue.offer(next);
                 
-                
                 if (v[next] < v[cur] + dist) {
                     v[next] = v[cur] + dist;
                 }
             }
         }
+
         int[] visited = new int[N+1];
         visited[end] =1;
         queue.add(end);
@@ -86,13 +83,9 @@ public class BOJ_P5_1948 {
                 }
             }
         }
-        int max = v[end]; // 최장거리
-
         
         System.out.println(v[end]);
         System.out.println(count);
-
-
     }
 }
 
