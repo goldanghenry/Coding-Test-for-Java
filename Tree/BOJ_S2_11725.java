@@ -15,8 +15,8 @@ public class BOJ_S2_11725 {
     private static void dfs(int cur) {
         for(int next : graph[cur]) {
             if(v[next] == 0) {
-            v[next] = cur;
-            dfs(next);
+                v[next] = cur;
+                dfs(next);
             }
         }
 
