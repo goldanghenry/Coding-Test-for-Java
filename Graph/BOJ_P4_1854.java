@@ -8,7 +8,7 @@ import java.util.*;
  * https://www.acmicpc.net/problem/1854
  */
 
-public class BOJ_P4_184 {
+public class BOJ_P4_1854 {
     private static class Edge {
         int target, weight;
         public Edge(int target, int weight) {
