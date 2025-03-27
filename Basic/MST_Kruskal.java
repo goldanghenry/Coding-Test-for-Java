@@ -1,3 +1,4 @@
+package Basic;
 
 import java.io.*;
 import java.util.*;
@@ -36,10 +37,11 @@ public class MST_Kruskal {
         int aRoot = find(a);
         int bRoot = find(b);
         if (aRoot == bRoot) return false; // 사이클 발생
-        else {
-            parents[bRoot] = aRoot;
-            return true;
-        }
+        // 랜덤 요소를 가미해 한쪽으로 치우쳐지지 않도록 보정
+        if (aRoot > bRoot) parents[bRoot] = aRoot;  
+        else parents[aRoot] = bRoot;
+            
+        return true;
     }
 
     public static void main(String[] args) throws IOException {
