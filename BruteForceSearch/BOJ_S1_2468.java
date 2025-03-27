@@ -1,3 +1,5 @@
+package BruteForceSearch;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
