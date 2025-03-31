@@ -29,10 +29,10 @@ public class Prim {
         int result = 0; // mst 비용
         minEdge[0] = 0; // 루틴에 의해 정점이 선택되도록 처리
         
-        int c;  // for문 밖에서 사용하기 위해 외부에 선언언
+        int c;  // for문 밖에서 사용하기 위해 외부에 선언
         for (c = 0; c < V; c++) {
             // step 1 : 비트리 정점 중, 트리에 속할 가장 유리한(간선의 비용이 적게 드는) 정점 찾기
-            // 추후, priority queue로 관리리
+            // 추후, priority queue로 관리
             int min = Integer.MAX_VALUE;
             int minVertex = -1;
             for (int i = 0; i < V; i++) {
