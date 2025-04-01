@@ -30,13 +30,13 @@ public class BOJ_G4_1753 {
         dist[start] = 0;
 
         // 노드 번호, 시작 노드로부터의 누적거리를 저장하는 우선 순위 큐
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
-        pq.offer(new int[]{start, 0});
+        PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.target));
+        pq.offer(new Edge(start, 0));
 
         while(!pq.isEmpty()) {
-            int[] cur = pq.poll();
-            int curNode = cur[0];
-            int curDist = cur[1];
+            Edge cur = pq.poll();
+            int curNode = cur.target;
+            int curDist = cur.weight;
 
             // 기존 경로가 더 짧다면 넘어감
             if (curDist > dist[curNode]) continue;
@@ -48,7 +48,7 @@ public class BOJ_G4_1753 {
 
                 if (newDist < dist[nextNode]) { // 새로운 경로가 더 짧은 경우
                     dist[nextNode] = newDist;
-                    pq.offer(new int[]{nextNode, newDist});
+                    pq.offer(new Edge(nextNode, newDist));
                 }
             }
         }
