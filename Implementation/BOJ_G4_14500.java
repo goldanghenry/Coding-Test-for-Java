@@ -31,12 +31,33 @@ public class BOJ_G4_14500 {
         
         for (int k = 0; k < 4; k++) {
             int nx = x + dx[k];
-            int ny = x + dy[k];
+            int ny = y + dy[k];
             
             if (nx < 0 || ny < 0 || nx >= N || ny >= M || visited[nx][ny]) continue;
             visited[nx][ny] = true;
             dfs(nx,ny,depth+1, sum+map[nx][ny]);
             visited[nx][ny] = false;
+        }
+    }
+    // dfs로 처리되지 않는 ㅜ를 처리, 중심은 x,y
+    private static void bruteForce(int x, int y) {
+        // 범위 체크 -> 값 뽑아내기 -> 합산 -> maxValue 업데이트
+        // 십자 모양인데 한번만 계산할 수는 없을까? 4방위
+        // 상하좌우, 0, 1, 2, 3
+        int[] values = new int[4];
+        boolean[] isMap = new boolean[4];
+        for (int k = 0; k < 4; k++) {
+            int nx = x + dx[k];
+            int ny = y + dy[k];
+            if (nx < 0 || ny < 0 || nx >= N || ny >= M) continue;
+            isMap[k] = true;
+            values[k] = map[nx][ny];
+        }
+
+        for (int i = 0; i < 4; i++) {
+            if (isMap[(i+1)%4] && isMap[(i+2)%4] && isMap[(i+3)%4]) {
+                res = Math.max(res, values[(i+1)%4]+values[(i+2)%4]+values[(i+3)%4]+map[x][y]);
+            }
         }
     }
 
@@ -66,16 +87,15 @@ public class BOJ_G4_14500 {
         // 칸 마다 블럭 만들기 시행
         // ㅜ 모양은 dfs로 생성할 수 없음, 순차적으로 생성될 수 없기 때문
         res = -1;
-
-        
+        visited = new boolean[N][M];
         for (int i = 0; i < N ; i++) {
             for (int j = 0 ; j < M; j++) {
                 visited[i][j] = true;
                 dfs(i,j,1, map[i][j]);
                 visited[i][j] = false;
+                bruteForce(i,j);
             }
         }
-
-
+        System.out.println(res);
     }
 }
