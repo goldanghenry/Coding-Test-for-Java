@@ -4,7 +4,7 @@ package Array;
  * 달팽이 나선형 배열
  */
 
-public class snail {
+public class Snail {
     public static void main(String[] args) {
         int N = 6;
         int[][] arr = makeSnailArr(N);
