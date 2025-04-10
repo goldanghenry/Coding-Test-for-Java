@@ -1,8 +1,14 @@
+package String;
 
 import java.io.*;
 import java.util.*;
 
-public class KMP {
+/*
+ * BOJ 1786 Platinum 5, 찾기
+ * https://www.acmicpc.net/problem/1786
+ */
+
+public class BOJ_P5_1786 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         char[] text = br.readLine().toCharArray();
@@ -48,7 +54,7 @@ public class KMP {
         System.out.println(cnt);
         if (cnt > 0 ) {
             for (int lst : list) {
-                System.out.print(lst+" ");
+                System.out.print((lst+1)+" ");
             }
         }
     }
