@@ -7,7 +7,7 @@ import java.io.*;
  * https://www.codetree.ai/ko/frequent-problems/problems/medusa-and-warriors/description
  */
 
-public class CT_EX_2024S_1 {
+public class CT_EX_2024S_3 {
     static int N, M;
     static int[] s, e, answer;
     static int[][] town, sight;
