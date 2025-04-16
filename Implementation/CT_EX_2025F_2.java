@@ -29,7 +29,7 @@ public class CT_EX_2025F_2 {
     static int[] dx = {-1,1,0,0};
     static int[] dy = {0,0,-1,1};
     static char[][] map;
-    static boolean[][][] v;
+    static int[][][] dist;
     
 
     private static class Frog implements Comparable<Frog> {
@@ -49,52 +49,70 @@ public class CT_EX_2025F_2 {
 
     private static int bfs(int x1, int y1, int x2, int y2) {
         PriorityQueue<Frog> pq = new PriorityQueue<>();
+        dist = new int[N][N][6];
+        for (int[][] layer: dist) {
+            for (int[] row: layer) {
+                Arrays.fill(row, Integer.MAX_VALUE);
+            }
+        }
+
         pq.add(new Frog(x1, y1, 1, 0));
-        v[x1][y1][1] = true;
-        res = Integer.MAX_VALUE;
+        dist[x1][x2][1] = 0;
 
         while(!pq.isEmpty()) {
             Frog cur = pq.poll();
 
             if (cur.x == x2 && cur.y == y2) {
-                res = Math.min(res,cur.time);
+                return cur.time;
             }
 
             // 1. 점프 -> 사방향
             for (int k = 0; k < 4; k++) {
-                int nx = x1;
-                int ny = y1;
-
-                // 점프가 가능한가?
+                int nx = cur.x;
+                int ny = cur.y;
                 boolean flag = false;
+                
+                // 점프가 가능한가?
                 for (int j = 1; j <= cur.jump; j++) {
                     nx += dx[k];
                     ny += dy[k];
-                    if (nx < 0 || ny < 0 || nx >= N || ny >= N) continue;
-                    if (v[nx][ny][cur.jump] || map[nx][ny]=='#') continue;
-                    if (j == cur.jump && map[nx][ny] == 'S') continue;
-                    if (j== cur.jump) flag = true;
+                    if (nx < 0 || ny < 0 || nx >= N || ny >= N) {
+                        flag = false;
+                        break;
+                    }
+
+                    if (map[nx][ny] == '#') {
+                        flag = false;
+                        break;
+                    }
+
+                    if (j == cur.jump && map[nx][ny] == 'S') {
+                        flag = false;
+                        break;
+                    }
                 }
-                if (flag) {
+                if (flag && dist[nx][ny][cur.jump] > cur.time+1) {
+                    dist[nx][ny][cur.jump] = cur.time +1;
                     pq.add(new Frog(nx, ny, cur.jump, cur.time+1));
-                    v[nx][ny][cur.jump] = true;
                 }
             }
 
-            // 2. 점프력 증가
-            int tj = cur.jump+1;
-            if (cur.jump < 5 && !v[cur.x][cur.y][tj]) {
-                pq.add(new Frog(cur.x, cur.y, tj, cur.time + (tj * tj)));
-                v[cur.x][cur.y][tj] = true;
+             // 2. 점프력 증가
+            if (cur.jump < 5) {
+                int tj = cur.jump + 1;
+                int tTime = cur.time + (tj * tj);
+                if (dist[cur.x][cur.y][tj] > tTime) {
+                    dist[cur.x][cur.y][tj] = tTime;
+                    pq.add(new Frog(cur.x, cur.y, tj, tTime));
+                }
             }
 
             // 3. 점프력 감소
-            if (cur.jump > 1) {
-                for (int i = cur.jump-1; i > 0; i++) {
-                    if (!v[cur.x][cur.y][i]) {
-                        pq.add(new Frog(cur.x, cur.y, i, cur.time + 1));
-                        v[cur.x][cur.y][i] = true;
-                    }
+            for (int tj = 1; tj < cur.jump; tj++) {
+                int tTime = cur.time + 1;
+                if (dist[cur.x][cur.y][tj] > tTime) {
+                    dist[cur.x][cur.y][tj] = tTime;
+                    pq.add(new Frog(cur.x, cur.y, tj, tTime));
                 }
             }
         }
@@ -125,8 +143,6 @@ public class CT_EX_2025F_2 {
             int sy = Integer.parseInt(st.nextToken())-1;
             int tx = Integer.parseInt(st.nextToken())-1;  // 도착점
             int ty = Integer.parseInt(st.nextToken())-1;
-
-            v = new boolean[N][N][6];
 
             int ans = bfs(sx,sy,tx,ty);
             sb.append(ans+"\n");
