@@ -50,6 +50,7 @@ public class CT_EX_2025F_2 {
     private static int bfs(int x1, int y1, int x2, int y2) {
         PriorityQueue<Frog> pq = new PriorityQueue<>();
         dist = new int[N][N][6];
+        res = Integer.MAX_VALUE;
         for (int[][] layer: dist) {
             for (int[] row: layer) {
                 Arrays.fill(row, Integer.MAX_VALUE);
@@ -57,20 +58,21 @@ public class CT_EX_2025F_2 {
         }
 
         pq.add(new Frog(x1, y1, 1, 0));
-        dist[x1][x2][1] = 0;
+        dist[x1][y1][1] = 0;
 
         while(!pq.isEmpty()) {
             Frog cur = pq.poll();
 
             if (cur.x == x2 && cur.y == y2) {
-                return cur.time;
+                res = Math.min(res, cur.time);
+                continue;
             }
 
             // 1. 점프 -> 사방향
             for (int k = 0; k < 4; k++) {
                 int nx = cur.x;
                 int ny = cur.y;
-                boolean flag = false;
+                boolean flag = true;
                 
                 // 점프가 가능한가?
                 for (int j = 1; j <= cur.jump; j++) {
